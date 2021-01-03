@@ -5,19 +5,6 @@ import './App.css';
 
 import Person from './Person/Person';
 
-const StyledButton = styled.button`
-                    background-color: ${props => props.alt ? 'red' : 'green'};
-                    color: white;
-                    font: inherit;
-                    border: 1px solid blue;
-                    padding: 8px;
-                    cursor: pointer;
-
-                    &:hover {
-                      background-color: yellow;
-                      color: white;
-                    }`;
-
 class App extends Component {
   state = {
     persons: [
@@ -93,7 +80,7 @@ class App extends Component {
         <h1> React App </h1>
 
         <p className={classes.join()}> Dynamic classes </p>
-        <StyledButton alt={this.state.showPersons} onClick={this.togglePersonHandler}> Destroy </StyledButton>
+        <button className='button' onClick={this.togglePersonHandler}> Destroy </button>
 
         {persons}
 
